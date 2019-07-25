@@ -2,11 +2,17 @@
 import React, {useState} from "react";
 import "./App.css";
 import BottomRow from "./BottomRow";
+import styled from "styled-components";
+
+const HomeTeam = styled.h2`
+  background-color: black;
+  color: white;
+`;
 
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
-  let [homeScore, setHomeScore] = useState(0);
-  let [awayScore, setAwayScore] = useState(0);
+  const [homeScore, setHomeScore] = useState(0);
+  const [awayScore, setAwayScore] = useState(0);
 
 
   return (
@@ -14,7 +20,7 @@ function App() {
       <section className="scoreboard">
         <div className="topRow">
           <div className="home">
-            <h2 className="home__name">Lions</h2>
+            <HomeTeam>Lions</HomeTeam>
 
             {/* TODO STEP 3 - We need to change the hardcoded values in these divs to accept dynamic values from our state. */}
 
